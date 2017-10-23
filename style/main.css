@@ -1,0 +1,427 @@
+body
+{
+    font-family: 'Encode Sans', sans-serif;
+    background: #242424;
+    overflow-x: hidden;
+}
+
+.modal-open
+{
+    overflow: hidden;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+button {
+    border: 1px solid #848484;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 0px;
+    font-family: 'Encode Sans', sans-serif;
+}
+
+button:focus
+{
+    outline: 0px;
+}
+
+div.header
+{
+    position: fixed;
+    top: 8px;
+    z-index: 1;
+}
+
+div.footer
+{
+    z-index: 1;
+}
+
+div.left
+{
+    position: fixed;
+    left: 8px;
+}
+
+div.right
+{
+    position: fixed;
+    right: 8px;
+}
+
+div.left-far
+{
+    position: fixed;
+    left: 4px;
+}
+
+div.right-far
+{
+    position: fixed;
+    right: 4px;
+}
+
+div.dialog
+{
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    z-index: 2;
+}
+
+div.dialog-content
+{
+    border: 2px solid #333333;
+    background-color: #cccccc;
+    width: 60%;
+    margin: auto;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(255,255,255,0.25);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(255,255,255,0.25);
+    box-shadow: 0px 0px 4px 0px rgba(255,255,255,0.25);
+    padding: 16px;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height: 104px;
+}
+
+div.dialog-message
+{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+div.dialog-buttons
+{
+    position: absolute;
+    bottom: 16px;
+    left: 0px;
+    right: 0px;
+}
+
+button.dialog
+{
+    height: 50px;
+    width: 80px;
+    border: 1px solid #484848;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+button.menu
+{
+    height: 64px;
+    width: 64px;
+}
+
+button.menu img
+{
+    width: 100%;
+    height: 100%;
+}
+
+div.menu
+{
+    text-align: center;
+    height: 64px;
+    margin-bottom: 8px;
+}
+
+div.menu button
+{
+    height: 64px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0px 24px 0px 24px;
+}
+
+div.system-list
+{
+    text-align: center;
+}
+
+div.system-list-count
+{
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #f7f7f7;
+    height: 40px;
+    width: 40px;
+    background: url('/starwars/img/x.png') center no-repeat;
+    background-size: 40px 40px;
+    line-height: 40px;
+    position: fixed;
+    bottom: 4px;
+}
+
+#system-list-count-empire
+{
+    background-image: url('/starwars/img/x-empire.png');
+}
+
+#system-list-count-rebel
+{
+    background-image: url('/starwars/img/x-rebel.png');
+}
+
+div.system
+{
+    padding: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    height: 96px;
+    border: 1px solid #484848;
+    background-color: #dfdfdf;
+    text-transform: uppercase;
+    border-radius: 4px;
+    max-width: 784px;
+    margin: auto auto 8px auto;
+}
+
+div.system:last-child
+{
+    margin-bottom: 0px;
+}
+
+div.system.loyal-empire
+{
+    background-color: #5e7591;
+}
+
+div.system.loyal-subj
+{
+    background-color: #658264;
+}
+
+div.system.loyal-rebel
+{
+    background-color: #af4949;
+}
+
+div.system.loyal-empire, div.system.loyal-subj, div.system.loyal-rebel
+{
+    border-color: #242424;
+}
+
+div.system.loyal-empire button.loyal, div.system.loyal-subj button.loyal, div.system.loyal-rebel button.loyal
+{
+    border-color: #242424;
+}
+
+div.loyalty
+{
+    white-space: nowrap;
+    margin-top: 8px;
+}
+
+button.loyal
+{
+    height: 54px;
+    width: 28%;
+    max-width: 200px;
+    margin: auto;
+    margin: 0px;
+}
+
+button.loyal.active
+{
+    background-color: #4286f4;
+    border-color: #244b8c; 
+}
+
+button.loyal img
+{
+    height: 80%;
+}
+
+div.build-list
+{
+    text-align: center;
+    color: #e2e2e2;
+    padding-bottom: 12px;
+}
+
+table.build-list
+{
+    width: 100%;
+    max-width: 784px;
+    margin: auto;
+    border-spacing: 0;
+}
+
+th.build-list-title
+{
+    height: 64px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+table.build-list > tbody > tr > td.build-list-faction
+{
+    font-size: 22px;
+    font-weight: bold;
+    border: 0;
+    padding: 0px 0px 4px 0px;
+    width: 50%;
+}
+
+table.build-list > tbody > tr > td > h3
+{
+    margin: 8px 0px 8px 0px;
+}
+
+table.build-list > tbody > tr > td
+{
+    padding: 8px;
+    border-right: 1px solid #484848;
+    border-bottom: 1px solid #484848;
+}
+
+table.build-list > tbody > tr > td.corners-top
+{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-left: 1px solid #484848;
+    border-top: 1px solid #484848
+}
+
+table.build-list > tbody > tr > td.corner-bottom-left
+{
+    border-bottom-left-radius: 4px;
+    border-left: 1px solid #484848;
+}
+
+table.build-list > tbody > tr > td.corner-bottom-right
+{
+    border-bottom-right-radius: 4px;
+}
+
+table.build-list > tbody > tr > td.build-list-space
+{
+    height: 0px;
+    border: 0px;
+}
+
+table.build-list-faction
+{
+    margin: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table.build-list-faction > tbody > tr > td
+{
+    padding: 0;
+}
+
+table.build-list-faction > tbody > tr > td.build-list-faction-name
+{
+    padding: 0px 6px 0px 6px;
+}
+
+table.build-list-faction > tbody > tr > td.build-list-faction-space
+{
+    width: 48px;
+}
+
+table.build-list-faction > tbody > tr > td.build-list-count, table.build-list-units > tr > td.build-list-units-count
+{
+    background: url('/starwars/img/x.png') center no-repeat;
+    background-size: 48px 48px;
+    height: 48px;
+    width: 48px;
+    max-width: 48px;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #f7f7f7;
+    padding-bottom: 2px;
+    overflow: hidden;
+}
+
+#build-list-count-empire
+{
+    background-image: url('/starwars/img/x-empire.png');
+}
+
+#build-list-count-rebel
+{
+    background-image: url('/starwars/img/x-rebel.png');
+}
+
+div.build-list-title
+{
+    margin: auto;
+    height: 64px;
+    font-weight: bold;
+    font-size: 24px;
+    display: table;
+}
+
+div.build-list-title div
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+table.build-list-units
+{
+    border-spacing: 2px;
+    border-collapse: separate;
+    margin: auto;
+}
+
+table.build-list-units > tr > td
+{
+    padding: 0px;
+}
+
+table.build-list-units > tr > td.build-list-units-count
+{
+    font-weight: 300;
+}
+
+td.build-list-units-content
+{
+    line-height: 0px;
+    text-align: center;
+    width: 104px;
+}
+
+img.unit
+{
+    height: 48px;
+    margin: 0px;
+    padding: 0px 2px 0px 2px;
+}
+
+img.unit-small
+{
+    width: 24px;
+    height: 24px;
+    padding: 0px 1px 0px 1px;
+}
