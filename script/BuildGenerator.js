@@ -571,7 +571,7 @@ function printUnits(build, element, faction) {
         var countStr = '{count}';
         var contentStr = '{content}';
 
-        var row = '<tr><td class="build-list-units-count">' + countStr + '</td><td class="build-list-units-content">' + contentStr + '</td></tr>';
+        var row = '<tr class="build-list-units-row" onclick="toggleUnitRow(this);"><td class="build-list-units-count">' + countStr + '</td><td class="build-list-units-content">' + contentStr + '</td></tr>';
 
         if (build.blueTriangle > 0) {
             output += row.replace(countStr, build.blueTriangle + 'x').replace(contentStr, printUnit(faction, 0));
@@ -605,10 +605,24 @@ function printUnit(faction, tier)
 
     var i;
     for (i = 0; i < unitTypes[faction][tier].length; i++) {
-        names += '<img class="unit ' + ((faction == 1 && tier == 0) ? 'unit-small' : '') + '" src="img/unit/' + unitTypes[faction][tier][i].image + '" alt="' + unitTypes[faction][tier][i].name + '"/>';
+        names += '<img class="unit' + ((faction == 1 && tier == 0) ? ' unit-small' : '') + '" src="img/unit/' + unitTypes[faction][tier][i].image + '" alt="' + unitTypes[faction][tier][i].name + '"/>';
     }
 
     return names;
+}
+
+function toggleUnitRow(rowElement)
+{
+    if ($(rowElement).hasClass('faded'))
+    {
+        $(rowElement).removeClass('faded');
+        $(rowElement).addClass('unfaded');
+    }
+    else
+    {
+        $(rowElement).addClass('faded');
+        $(rowElement).removeClass('unfaded');
+    }
 }
 
 function setKeyPressEvents() {

@@ -395,6 +395,50 @@ table.build-list-units
     margin: auto;
 }
 
+@keyframes unblur {
+    from 
+    {
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+    to 
+    {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes blur {
+    from 
+    {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    to
+    {
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+}
+
+table.build-list-units > tr.unfaded > td
+{
+    opacity: 1;
+    filter: blur(0px);
+
+    animation: unblur 0.2s;
+    -webkit-animation: unblur 0.2s;
+}
+
+table.build-list-units > tr.faded > td
+{
+    opacity: 0.2;
+    filter: blur(4px);
+
+    animation: blur 0.2s;
+    -webkit-animation: blur 0.2s;
+}
+
 table.build-list-units > tr > td
 {
     padding: 0px;
