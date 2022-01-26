@@ -171,7 +171,7 @@ div.system-list-count
     color: #f7f7f7;
     height: 40px;
     width: 40px;
-    background: url('/starwars/img/x.png') center no-repeat;
+    background: url('../img/x.png') center no-repeat;
     background-size: 40px 40px;
     line-height: 40px;
     position: fixed;
@@ -180,12 +180,12 @@ div.system-list-count
 
 #system-list-count-empire
 {
-    background-image: url('/starwars/img/x-empire.png');
+    background-image: url('../img/x-empire.png');
 }
 
 #system-list-count-rebel
 {
-    background-image: url('/starwars/img/x-rebel.png');
+    background-image: url('../img/x-rebel.png');
 }
 
 div.system
@@ -350,7 +350,7 @@ table.build-list-faction > tbody > tr > td.build-list-faction-space
 
 table.build-list-faction > tbody > tr > td.build-list-count, table.build-list-units > tr > td.build-list-units-count
 {
-    background: url('/starwars/img/x.png') center no-repeat;
+    background: url('../img/x.png') center no-repeat;
     background-size: 48px 48px;
     height: 48px;
     width: 48px;
@@ -365,12 +365,12 @@ table.build-list-faction > tbody > tr > td.build-list-count, table.build-list-un
 
 #build-list-count-empire
 {
-    background-image: url('/starwars/img/x-empire.png');
+    background-image: url('../img/x-empire.png');
 }
 
 #build-list-count-rebel
 {
-    background-image: url('/starwars/img/x-rebel.png');
+    background-image: url('../img/x-rebel.png');
 }
 
 div.build-list-title
